@@ -1,0 +1,53 @@
+root : hiya username and have access all usernames to open it,
+
+sudo : 
+
+VM : virtual machine hiya software kat run program ola application without 
+physical machine , 9ader tdir MUltiple operation system bl single process,  
+
+process management : >>
+
+process : hiya run program with instraction in fwa kan3ti command f linux 
+            kaykhdm new process.
+Type process >> Foreground Process : hiya kat run program with user,
+                 katkon khdam f process ohiya execute 7ta issali task . 
+                Background Process : hiya kat run program without user 
+CMD top : PID : id process 
+          USER : run program bash mkhdmo user .
+CMD ps : process status  
+         ps ux --> all inforamtion
+         ps PID --> process id you chose
+CMD kill : kill PID : katdir terminates running process.
+CMD pidof : pidof name_prgram : kat3tik id lifat7 smit program.
+
+
+ ============================================================
+ RCU --> CPU id = 3 ; he always work but i dont know how to work 
+ i think RCU its work read and write but im not sure about that 
+ so i search this point , and found many new information ;
+ ok lets talk about pointers , if asken you what is pointers and 
+ how to work pointers usauly we define it but only know in program c 
+ but i talkin exactly how to work if i compile it and running program
+ what happened pointers in kernel(operation system) , so let talk
+ function of an operation system , we have process management ,
+ and we know what is it, and how to work on general , but if you open 
+ CMD (top) and search for example low id (id = 3 or id = 4 ..) 
+ and you find name program work is (rcu_gp), that mean program primaly
+ it work in system kernel so what is rcu , rcu is  READ-COPY-UPDATE and 
+ how to work , we consider readers data structre can removal and reclaimed and ....,
+ so lets talk some funtion have RCU, is rcu_assign_pointer() this function ,
+ It performs the process of creating a pointer and given value with the address 
+ on memory, so we understand, this operation RCU we find in CPU can bears(yata7amalo)
+ all the process around pointers(data structure).
+=================================================================
+
+APParmor : LINUX kernel security module , that provides(kat wfrlik) MAC 
+lprofile dyalik , ya3ni ay 7aja 9adr 3la tcontroli system dyalk darori t3yt APParmor
+bash itklf lik.
+
+/usr/bin/man == 
+/usr/lib/NetworkManager/nm-dhcp-cleant or helper == 
+/usr/lib/connman/scripts/dhclient == 
+/sbin/dhclient == 
+ping == 
+syslog-ng == aa-complain \

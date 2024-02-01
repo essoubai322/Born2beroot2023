@@ -1,0 +1,31 @@
+archirtecture : uname -a
+
+CPU Physical : lscpu | grep "Socket" | grep -Eo '[0-9]+'
+
+CPU virtual : lscpu | grep "CPU(s):" | head -1 | grep -Eo '[0-9]+'
+
+available RAM : free --mega | head -2 | grep [0-9] | tr -s ' ' | cut -d' ' -f7
+
+Total Ram : inxi -m | grep -oP 'total: \K[0-9.]+ MiB'
+
+'%' Ram : inxi -m | grep -oP '\(\K[0-9.]+%'
+
+Total Disk : inxi -D | grep "Local" | grep -oP 'total: \K[0-9.]+'
+
+avaible Disk : inxi -Fxz | grep "Storage:" | grep -Eo '[0-9.]+ ' | paste -sd- | bc
+
+'%' Disk : inxi -D | grep "Local" | grep -oP '\(\K[0-9.]+%'
+
+load CPU : echo "100 - $(iostat -c | tail -4 | grep -Eo '[0-9.]+' | tail -1)" | bc | xargs printf "%.2f%%"
+
+Last boot : uptime -s
+
+use LVM : lvs | grep -q "LVM" && echo "yes" || echo "no"
+
+TCP : netstat -ant | grep "tcp" | grep "ESTABLISHED" | wc -l
+
+mac adress : ifconfig | grep -o -E '([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}' | head -1
+
+ip : hostname -I
+
+user log : w -h | wc -l

@@ -8,6 +8,8 @@
 
 3-) “adduser <user> sudo” --> Adds the specified user to the sudo group. NOTE: Check if the user is added to the group with “getent group sudo”!
 
+3-1) sudo addgroup user42 --> sudo usermod -aG <user> user42
+
 4-) We reboot the system with the “reboot” command.
 
 5-) After logging in to the user added to the group, let’s check again with “sudo -v”.
